@@ -4,7 +4,7 @@
     <div class="options-content">
       <div class="option-item" v-for="(option, _index) in value.options" :key="_index">
         <a-input v-model="value.options[_index]" :placeholder="`option ${_index + 1}`" />
-        <a-icon type="delete" class="remove-icon" @click="onRemoveOption" />
+        <a-icon type="delete" class="remove-icon" @click="onRemoveOption(_index)" />
       </div>
 
       <a-button type="dashed" @click="onAddOption()">add option</a-button>
